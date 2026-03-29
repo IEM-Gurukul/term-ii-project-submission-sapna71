@@ -1,3 +1,4 @@
+//Structure
 public class Elevator {
     private State currentState;
     private int currentFloor;
