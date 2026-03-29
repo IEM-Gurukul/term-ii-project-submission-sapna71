@@ -3,6 +3,7 @@ public class MovingUpState implements State {
         System.out.println("Moving up to floor " + floor);
         elevator.setCurrentFloor(floor);
         elevator.setState(new DoorOpenState());
+        // Finalize the arrival logic
         elevator.requestFloor(floor);
     }
 }
