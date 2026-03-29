@@ -1,4 +1,3 @@
-//Moving Down
 public class MovingDownState implements State {
     public void handleRequest(Elevator elevator, int floor) {
         System.out.println("Moving down to floor " + floor);
