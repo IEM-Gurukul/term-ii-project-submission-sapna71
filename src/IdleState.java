@@ -1,4 +1,3 @@
-// Handles idle state behavior and decides movement direction
 public class IdleState implements State {
     public void handleRequest(Elevator elevator, int floor) {
         if (floor == elevator.getCurrentFloor()) {
