@@ -44,25 +44,14 @@ IdleState, MovingUpState, MovingDownState, and DoorOpenState are concrete implem
 
 Each state controls the elevator's behavior, and transitions happen dynamically based on user requests.
 
-Project Structure
-
-src/
- ├── State.java
- ├── Elevator.java
- ├── IdleState.java
- ├── MovingUpState.java
- ├── MovingDownState.java
- ├── DoorOpenState.java
- └── Main.java
-
 ## How to Run
 
 Step 1: Navigate to source folder
-cd src
+ cd src
 Step 2: Compile the code
-javac *.java
+ javac *.java
 Step 3: Run the program
-java Main
+ java Main
 
 ## Git Discipline Notes
 This project adheres to a modular development workflow, ensuring each component of the State Design Pattern was independently implemented, tested, and verified before integration.
