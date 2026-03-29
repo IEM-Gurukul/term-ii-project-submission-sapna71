@@ -62,7 +62,7 @@ Step 3: Run the program
 ## Git Discipline Notes
 This project adheres to a modular development workflow, ensuring each component of the State Design Pattern was independently implemented, tested, and verified before integration.
 
-1. Commit Strategy
+Commit Strategy
 The repository reflects a "Feature-Driven Commit" discipline, where each commit represents a functional milestone in the elevator's lifecycle:
 
 Atomic Commits: Each state (Idle, Moving, DoorOpen) was pushed as a separate unit to ensure isolation of logic.
