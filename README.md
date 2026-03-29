@@ -47,12 +47,15 @@ Each state controls the elevator's behavior, and transitions happen dynamically 
 ## How to Run
 
 Step 1: Navigate to source folder
+
 ```cd src```
 
 Step 2: Compile the code
+
 ```javac *.java```
 
 Step 3: Run the program
+
  ```java Main```
 
 
