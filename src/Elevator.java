@@ -1,42 +1,26 @@
-import java.util.LinkedList;
-import java.util.Queue;
-
+/**
+ * The 'Context' class in the State Design Pattern.
+ * Maintains a reference to the current state and coordinates transitions.
+ */
 public class Elevator {
-
-    private State currentState;
-    private int currentFloor;
-    private Queue<Integer> requests;
+    private State currentState; // Encapsulated state object
+    private int currentFloor;   // Internal data tracking
 
     public Elevator() {
-        currentState = new IdleState();
-        currentFloor = 0;
-        requests = new LinkedList<>();
+        this.currentFloor = 0; // Default starting floor
+        this.currentState = new IdleState(); // Initial state
     }
 
-    public void setState(State state) {
-        this.currentState = state;
-    }
+    // Standard getters and setters demonstrating Encapsulation
+    public void setState(State state) { this.currentState = state; }
+    public int getCurrentFloor() { return currentFloor; }
+    public void setCurrentFloor(int floor) { this.currentFloor = floor; }
 
-    public int getCurrentFloor() {
-        return currentFloor;
-    }
-
-    public void setCurrentFloor(int floor) {
-        this.currentFloor = floor;
-    }
-
-    // Add request to queue
+    /**
+     * Delegates the request to the current state object.
+     * Demonstrates Polymorphism: behavior changes based on the object type of currentState.
+     */
     public void requestFloor(int floor) {
-        System.out.println("Request received for floor: " + floor);
-        requests.add(floor);
-        processRequests();
-    }
-
-    // Process queue
-    private void processRequests() {
-        while (!requests.isEmpty()) {
-            int targetFloor = requests.poll();
-            currentState.handleRequest(this, targetFloor);
-        }
+        currentState.handleRequest(this, floor);
     }
 }
